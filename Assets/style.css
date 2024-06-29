@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Supreme', sans-serif;
+}
+
+.bg-image,
+.bg-gray {
+    border-radius: 50px;
+}
+
+.bg-image {
+    background-image: url(bg-home-page.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.34);
+}
+
+@media (max-width: 1023px) {
+    .bg-image {
+        background-position: center;
+    }
+
+    .bg-image,
+    .bg-gray {
+        border-radius: 0px;
+    }
+}
+
+
+.bg-gray {
+    background-color: rgba(54, 54, 54, 0.434);
+}
