@@ -5,6 +5,10 @@
     scroll-behavior: smooth;
 }
 
+header ul li a{
+    transition: 0.6s ease
+}
+
 .bg-image,
 .bg-gray {
     border-radius: 50px;
@@ -33,7 +37,7 @@
 }
 
 .cards-hover {
-    transition: 0.8s ease;
+    transition: 0.6s ease;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.167);
 }
@@ -47,4 +51,8 @@
 
 .scrolle-hidden::-webkit-scrollbar {
     width: 0;
+}
+
+.button-slide{
+    transition: 0.6s ease;
 }
