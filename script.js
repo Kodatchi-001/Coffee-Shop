@@ -52,7 +52,7 @@ function cards_page_2_cards_1(direction) {
     current_Index_1 = moveSlide(direction, current_Index_1, totalSlides);
     document.querySelector('.cards-1').style.transform = `translateX(${current_Index_1 * -100}%)`;
     const button_index = document.querySelectorAll('.button-1');
-    update_button_2(current_Index_1,button_index);
+    update_button_2(current_Index_1, button_index);
 }
 
 var current_Index_3 = 0;
@@ -62,7 +62,7 @@ function cards_page_2_cards_3(direction) {
     current_Index_3 = moveSlide(direction, current_Index_3, totalSlides);
     document.querySelector('.cards-3').style.transform = `translateX(${current_Index_3 * -100}%)`;
     const button_index = document.querySelectorAll('.button-3');
-    update_button_2(current_Index_3,button_index);
+    update_button_2(current_Index_3, button_index);
 }
 
 var current_Index_5 = 0;
@@ -72,7 +72,7 @@ function cards_page_2_cards_5(direction) {
     current_Index_5 = moveSlide(direction, current_Index_5, totalSlides);
     document.querySelector('.cards-5').style.transform = `translateX(${current_Index_5 * -100}%)`;
     const button_index = document.querySelectorAll('.button-5');
-    update_button_2(current_Index_5,button_index);
+    update_button_2(current_Index_5, button_index);
 }
 
 var current_Index_6 = 0;
@@ -82,10 +82,10 @@ function cards_page_2_cards_6(direction) {
     current_Index_6 = moveSlide(direction, current_Index_6, totalSlides);
     document.querySelector('.cards-6').style.transform = `translateX(${current_Index_6 * -100}%)`;
     const button_index = document.querySelectorAll('.button-6');
-    update_button_2(current_Index_6,button_index);
+    update_button_2(current_Index_6, button_index);
 }
 
-function update_button_2(index_button,button_index) {
+function update_button_2(index_button, button_index) {
     button_index.forEach((button, index) => {
         if (index === index_button) {
             button.style.backgroundColor = 'black'
@@ -117,3 +117,27 @@ function moveSlide(direction, currentIndex, totalSlides) {
     currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
     return currentIndex;
 }
+
+//cards-info
+function cards_info() {
+    const cards = document.querySelectorAll('.cards-info');
+    const style_cards_info = document.querySelector('.style-cards-info')
+    const image_cards_info = document.querySelector('.image-cards-info');
+    cards.forEach((element,index) => {
+        element.addEventListener('click', function () {
+            if (index == 0) {
+                style_cards_info.style.marginTop = ''
+                image_cards_info.src = 'Assets/meting-room.png'
+            }
+            else if (index == 1) {
+                style_cards_info.style.marginTop = '7rem'
+                image_cards_info.src = 'Assets/coffee bean.jpg'
+            }
+            else if (index == 2) {
+                style_cards_info.style.marginTop = '14rem'
+                image_cards_info.src = 'Assets/work space.jpg'
+            }
+        })
+    });
+}
+cards_info()
