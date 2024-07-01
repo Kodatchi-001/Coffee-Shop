@@ -29,98 +29,64 @@ let currentSlideIndex = 0;
 function scrollToSlide_2(slideIndex) {
     const slidesContainer = document.querySelector('.cards-slides-page-2');
     slidesContainer.style.transform = `translateX(${slideIndex * -100}%)`;
-    update_button_2(slideIndex)
+    update_button(slideIndex)
 }
 
-function update_button_2(index_button) {
+function update_button(index_button) {
     const buttons = document.querySelectorAll('.button-page-2');
     buttons.forEach((button, index) => {
         if (index === index_button) {
-            button.style.backgroundColor = '#fbb239'
-        } else {
+            button.style.color = 'white'
             button.style.backgroundColor = 'black'
+        } else {
+            button.style.color = ''
+            button.style.backgroundColor = ''
         }
     });
 }
 
-var currentIndex1 = 0;
-var currentIndex3 = 0;
-var currentIndex5 = 0;
-var currentIndex6 = 0;
-
+var current_Index_1 = 0;
 function cards_page_2_cards_1(direction) {
     const slides = document.querySelectorAll('.card-slides-1');
     const totalSlides = slides.length;
-    currentIndex1 = moveSlide(direction, currentIndex1, totalSlides);
-    document.querySelector('.cards-1').style.transform = `translateX(${currentIndex1 * -100}%)`;
-    update_button(currentIndex1);
+    current_Index_1 = moveSlide(direction, current_Index_1, totalSlides);
+    document.querySelector('.cards-1').style.transform = `translateX(${current_Index_1 * -100}%)`;
+    const button_index = document.querySelectorAll('.button-1');
+    update_button_2(current_Index_1,button_index);
 }
 
+var current_Index_3 = 0;
 function cards_page_2_cards_3(direction) {
     const slides = document.querySelectorAll('.card-slides-3');
     const totalSlides = slides.length;
-    currentIndex3 = moveSlide(direction, currentIndex3, totalSlides);
-    document.querySelector('.cards-3').style.transform = `translateX(${currentIndex3 * -100}%)`;
-    update_button_3(currentIndex3);
+    current_Index_3 = moveSlide(direction, current_Index_3, totalSlides);
+    document.querySelector('.cards-3').style.transform = `translateX(${current_Index_3 * -100}%)`;
+    const button_index = document.querySelectorAll('.button-3');
+    update_button_2(current_Index_3,button_index);
 }
 
+var current_Index_5 = 0;
 function cards_page_2_cards_5(direction) {
     const slides = document.querySelectorAll('.card-slides-5');
     const totalSlides = slides.length;
-    currentIndex5 = moveSlide(direction, currentIndex5, totalSlides);
-    document.querySelector('.cards-5').style.transform = `translateX(${currentIndex5 * -100}%)`;
-    update_button_5(currentIndex5);
+    current_Index_5 = moveSlide(direction, current_Index_5, totalSlides);
+    document.querySelector('.cards-5').style.transform = `translateX(${current_Index_5 * -100}%)`;
+    const button_index = document.querySelectorAll('.button-5');
+    update_button_2(current_Index_5,button_index);
 }
 
+var current_Index_6 = 0;
 function cards_page_2_cards_6(direction) {
     const slides = document.querySelectorAll('.card-slides-6');
     const totalSlides = slides.length;
-    currentIndex6 = moveSlide(direction, currentIndex6, totalSlides);
-    document.querySelector('.cards-6').style.transform = `translateX(${currentIndex6 * -100}%)`;
-    update_button_6(currentIndex6);
+    current_Index_6 = moveSlide(direction, current_Index_6, totalSlides);
+    document.querySelector('.cards-6').style.transform = `translateX(${current_Index_6 * -100}%)`;
+    const button_index = document.querySelectorAll('.button-6');
+    update_button_2(current_Index_6,button_index);
 }
 
-
-function update_button(index_button) {
-    const buttons = document.querySelectorAll('.button-1');
-    buttons.forEach((button, index) => {
-        if (index === index_button) {
-            button.style.backgroundColor = 'black'
-        }
-        else {
-            button.style.backgroundColor = '#e5e7eb'
-        }
-    });
-}
-
-function update_button_3(index_button) {
-    const buttons = document.querySelectorAll('.button-3');
-    buttons.forEach((button, index) => {
-        if (index === index_button) {
-            button.style.backgroundColor = 'black'
-        }
-        else {
-            button.style.backgroundColor = '#e5e7eb'
-        }
-    });
-}
-
-function update_button_5(index_button) {
-    const buttons = document.querySelectorAll('.button-5');
-    buttons.forEach((button, index) => {
-        if (index === index_button) {
-            button.style.backgroundColor = 'black'
-        }
-        else {
-            button.style.backgroundColor = '#e5e7eb'
-        }
-    });
-}
-
-
-function update_button_6(index_button) {
-    const buttons = document.querySelectorAll('.button-6');
-    buttons.forEach((button, index) => {
+function update_button_2(index_button,button_index) {
+    button_index.forEach((button, index) => {
         if (index === index_button) {
             button.style.backgroundColor = 'black'
         }
