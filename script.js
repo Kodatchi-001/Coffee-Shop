@@ -22,9 +22,13 @@ function button_slides() {
     document.getElementById('btn-5-page-2').addEventListener('click', () => scrollToSlide_2(4));
     document.getElementById('btn-6-page-2').addEventListener('click', () => scrollToSlide_2(5));
     document.getElementById('btn-7-page-2').addEventListener('click', () => scrollToSlide_2(6));
+    // page-4
+    document.getElementById('btn-1-page-4').addEventListener('click', () => scrollToSlide_4(0));
+    document.getElementById('btn-2-page-4').addEventListener('click', () => scrollToSlide_4(1));
+    document.getElementById('btn-3-page-4').addEventListener('click', () => scrollToSlide_4(2));
+    document.getElementById('btn-4-page-4').addEventListener('click', () => scrollToSlide_4(3));
 }
 button_slides();
-let currentSlideIndex = 0;
 
 function scrollToSlide_2(slideIndex) {
     const slidesContainer = document.querySelector('.cards-slides-page-2');
@@ -123,7 +127,7 @@ function cards_info() {
     const cards = document.querySelectorAll('.cards-info');
     const style_cards_info = document.querySelector('.style-cards-info')
     const image_cards_info = document.querySelector('.image-cards-info');
-    cards.forEach((element,index) => {
+    cards.forEach((element, index) => {
         element.addEventListener('click', function () {
             if (index == 0) {
                 style_cards_info.style.marginTop = ''
@@ -141,3 +145,33 @@ function cards_info() {
     });
 }
 cards_info()
+
+//cards/slides/page-4
+function scrollToSlide_4(slideIndex) {
+    const slidesContainer = document.querySelector('.cards-slides-page-4');
+    slidesContainer.style.transform = `translateX(${slideIndex * -100}%)`;
+    update_button_4(slideIndex)
+}
+
+function update_button_4(index_button) {
+    const buttons = document.querySelectorAll('.button-page-4');
+    buttons.forEach((button, index) => {
+        if (index === index_button) {
+            button.style.color = 'black'
+            button.style.fontWeight = '700'
+            button.style.borderBottom = '2px solid black'
+        }
+        else {
+            if (index === 0) {
+                button.style.color = '#9ca3af'
+                button.style.fontWeight = '400'
+                button.style.borderBottom = '1px solid #9ca3af'
+            }
+            else {
+                button.style.color = ''
+                button.style.fontWeight = ''
+                button.style.border = ''
+            }
+        }
+    });
+}
