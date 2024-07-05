@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
 }
 
-header ul li a{
+header ul li a {
     transition: 0.6s ease
 }
 
@@ -53,7 +53,7 @@ header ul li a{
     width: 0;
 }
 
-.button-slide{
+.button-slide {
     transition: 0.6s ease;
 }
 
@@ -61,19 +61,27 @@ header ul li a{
     transition: 0.6s ease;
 }
 
-.cards-event{
+.cards-event {
     border: 2px solid rgba(0, 0, 0, 0.142);
     border-radius: 20px;
     overflow: hidden;
 }
 
-.cards-event-bg-1{
+.cards-event-bg-1 {
     background-image: url(menu_coffee_shop.png);
     background-size: cover;
     background-position: bottom;
 }
 
-.cards-event-bg-2{
+.cards-event-bg-2 {
     background-image: url(order.png);
     background-size: cover;
+}
+
+.border-gray {
+    border-top: 2px solid rgba(255, 255, 255, 0.413);
+}
+
+.text-gray {
+    color: rgba(255, 255, 255, 0.628);
 }
