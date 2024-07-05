@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <header class="w-full h-[9vh] lg:h-[11vh] flex justify-center items-center">
-        <div class="w-5/6 sm:w-[88%] h-5/6 flex justify-between items-center">
-            <div class="w-1/6 h-full flex justify-start items-center">
+    <header class="w-full h-[9vh] lg:h-[11vh] flex justify-center items-center flex-wrap overflow-hidden">
+        <div class="w-[85%] sm:w-[88%] h-full lg:h-5/6 flex justify-between items-center">
+            <div class="w-1/5 lg:w-1/6 h-full flex justify-start items-center">
                 <img src="Assets/logo-web-page.png" class="scale-150 sm:scale-105 md:scale-90" alt="">
             </div>
             <ul class="w-2/6 h-full lg:flex justify-around items-center hidden">
@@ -28,6 +28,17 @@
             <div class="w-1/6 h-full lg:flex justify-end items-center hidden">
                 <button class="px-4 py-2 rounded-xl text-sm bg-black text-white">Contact Us</button>
             </div>
+            <div class="w-1/6 h-full flex justify-end items-center lg:hidden">
+                <i class='bx bx-dots-vertical-rounded text-2xl' onclick="navbar_responsiv()"></i>
+            </div>
+        </div>
+        <div class="w-[90%] h-1/2 flex justify-center items-center lg:hidden">
+            <ul class="w-full h-full flex justify-between items-center">
+                <li><a href="#home-page" class="text-black">Home</a></li>
+                <li><a href="#Menu" class="text-gray-400">Menu</a></li>
+                <li><a href="#About" class="text-gray-400">About</a></li>
+                <li><a href="#Event" class="text-gray-400">Event</a></li>
+            </ul>
         </div>
     </header>
     <section class="w-full lg:w-[98%] h-[89vh] lg:h-[87vh] ml-auto mr-auto bg-image" id="home-page">
@@ -1640,8 +1651,7 @@
             </div>
         </div>
     </section>
-    <footer class="w-[98%] h-[60vh] flex justify-center items-center flex-wrap ml-auto mr-auto mb-5 bg-black"
-        style="border-radius: 50px;">
+    <footer class="w-[98%] h-[60vh] flex justify-center items-center flex-wrap ml-auto mr-auto mb-0 lg:mb-5 bg-black">
         <div class="w-[90%] h-[65%] flex justify-between items-center mt-auto">
             <div class="w-full lg:w-1/5 h-full flex flex-wrap text-white" style="font-weight: 600;">
                 <h1 class="w-full text-center lg:text-start text-3xl">Coffein</h1>

@@ -11,6 +11,24 @@ function header_links() {
     });
 }
 header_links()
+//navbar-responsiv
+function navbar_responsiv() {
+    const header = document.querySelector('header');
+    const header_div_1 = document.querySelector('header div:first-child');
+    const header_div_2 = document.querySelector('header div:last-child');
+    height_header = '15vh'
+    
+    if (header.style.height == height_header) {
+        header.style.height = ''
+        header_div_1.style.height = ''
+        header_div_2.style.height = ''
+    }
+    else{
+        header.style.height = height_header
+        header_div_1.style.height = '50%'
+        header_div_2.style.height = '50%'
+    }
+}
 
 //Cards slide
 function button_slides() {
